@@ -3,7 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Ana Teresa Quesada Ramírez">
-    <title>Part1</title>
+    <title>Part2</title>
+    <style media="screen">
+      fieldset {
+        background: lightyellow;
+        border:10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px;
+      }
+
+      label {
+        width: 180px;
+        display: inline-block;
+        text-align: right;
+        text-align: top;
+      }
+
+      .labels {
+        width: auto;
+      }
+
+      span {
+        text-align: center;
+      }
+
+      textarea {
+        width:360px;
+        height:50px;
+      }
+    </style>
   </head>
   <body>
     <form method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
@@ -24,9 +52,9 @@
 
         <label for="gender">Gender: </label>
         <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Male</label>
+        <label class="labels" for="male">Male</label>
         <input type="radio" id="female" name="gender" value="female" required>
-        <label for="female">Female</label>
+        <label class="labels" for="female">Female</label>
         <br>
         <label for="number">Age: </label>
         <input type="number" id="number" name="number" value="18" required> <br>
@@ -52,10 +80,11 @@
       <fieldset>
         <legend>Your Indicators</legend>
         <label for="height">Height: </label>
-        Short<input type="range" id="height" name="height" value="50" min="0" max="100">Tall
+
+        <span>Short</span><input type="range" id="height" name="height" value="50" min="0" max="100"><span>Tall</span>
         <br>
         <label for="salary">Salary: </label>
-        Poor<input type="range" id="salary" name="salary" value="50" min="0" max="100">Rich
+        <span>Poor</span><input type="range" id="salary" name="salary" value="50" min="0" max="100"><span>Rich</span>
       </fieldset>
 
       <fieldset>
@@ -67,19 +96,18 @@
         <input type="tel" id="tel" name="tel" value=""> <br>
 
         <label for="address">Address: </label>
-        <textarea id="address" name="address" rows="1.5" cols="21"></textarea> <br>
+        <textarea id="address" name="address"></textarea> <br>
 
         <label for="contact">Method to contact you: </label>
 
         <input type="checkbox" id="E-mail" name="contact" value="">
-        <label for="E-mail">Email  </label>
-
+        <label class="labels" for="E-mail">Email  </label>
 
         <input type="checkbox" id="whatsapp" name="contact" value="">
-        <label for="whatsapp">Whatsapp  </label>
+        <label class="labels" for="whatsapp">Whatsapp  </label>
 
         <input type="checkbox" id="chat" name="contact" value="">
-        <label for="chat">In-app-chat  </label>
+        <label class="labels" for="chat">In-app-chat  </label>
 
       </fieldset>
 
