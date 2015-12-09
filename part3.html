@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Ana Teresa Quesada Ramírez">
+    <title>Part2</title>
+    <style media="screen">
+      fieldset {
+        background: lightyellow;
+        border:10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px;
+      }
+
+      label {
+        width: 180px;
+        display: inline-block;
+        text-align: right;
+        text-align: top;
+      }
+
+      .labels {
+        width: auto;
+      }
+
+      span {
+        text-align: center;
+      }
+
+      textarea {
+        width:360px;
+        height:50px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
+      <h1>Please Enter Your Details For Our Dating Website!</h1>
+
+      <fieldset>
+        <legend>Your Face</legend>
+        <label for="file">Your image: </label>
+        <input type="file" id="file" name="file" value="No file chosen" required> <br>
+
+        <label for="preview">Image preview: </label>
+        <img id="preview" src="" alt="No upload image" />
+      </fieldset>
+      <fieldset>
+        <legend>Your General Details</legend>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" placeholder="Your full name"><br>
+
+        <label for="gender">Gender: </label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label class="labels" for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label class="labels" for="female">Female</label>
+        <br>
+        <label for="number">Age: </label>
+        <input type="number" id="number" name="number" value="18" required> <br>
+
+        <label for="date">Date of birth: </label>
+        <input type="date" name="date" value=""> <br>
+
+        <label for="color">Favorite color: </label>
+        <input type="color" id="color" name="color" value=""> <br>
+
+        <label for="country">Which country:</label>
+        <select>
+          <option value="Costa Rica">Costa Rica</option>
+          <option value="Costa Rica">Francia</option>
+          <option value="Costa Rica">Italia</option>
+
+          <option value="Costa Rica">Alemania</option>
+          <option value="Costa Rica">Hong Kong</option>
+          <option value="Costa Rica">Grecia</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Indicators</legend>
+        <label for="height">Height: </label>
+
+        <span>Short</span><input type="range" id="height" name="height" value="50" min="0" max="100"><span>Tall</span>
+        <br>
+        <label for="salary">Salary: </label>
+        <span>Poor</span><input type="range" id="salary" name="salary" value="50" min="0" max="100"><span>Rich</span>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Contact Information</legend>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" value="" required> <br>
+
+        <label for="tel">Mobile: </label>
+        <input type="tel" id="tel" name="tel" value=""> <br>
+
+        <label for="address">Address: </label>
+        <textarea id="address" name="address"></textarea> <br>
+
+        <label for="contact">Method to contact you: </label>
+
+        <input type="checkbox" id="E-mail" name="contact" value="">
+        <label class="labels" for="E-mail">Email  </label>
+
+        <input type="checkbox" id="whatsapp" name="contact" value="">
+        <label class="labels" for="whatsapp">Whatsapp  </label>
+
+        <input type="checkbox" id="chat" name="contact" value="">
+        <label class="labels" for="chat">In-app-chat  </label>
+
+      </fieldset>
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+
+  </body>
+</html>
